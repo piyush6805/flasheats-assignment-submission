@@ -1,0 +1,95 @@
+{
+  "gate": "WARN",
+  "checks": [
+    {
+      "check": "orders.required_columns",
+      "status": "PASS",
+      "detail": "9 required columns present",
+      "action": ""
+    },
+    {
+      "check": "order_outcomes.required_columns",
+      "status": "PASS",
+      "detail": "6 required columns present",
+      "action": ""
+    },
+    {
+      "check": "dispatch.required_columns",
+      "status": "PASS",
+      "detail": "3 required columns present",
+      "action": ""
+    },
+    {
+      "check": "orders.order_id_uniqueness",
+      "status": "WARN",
+      "detail": "duplicate_order_ids=3 duplicate_rows_involved=6",
+      "action": "Quarantine conflicting duplicates; do not silently choose first row"
+    },
+    {
+      "check": "orders.delivered_completion_timestamp",
+      "status": "WARN",
+      "detail": "delivered_rows_missing_actual_delivery_at=37",
+      "action": "Exclude from raw timestamp KPI and report separately"
+    },
+    {
+      "check": "orders.timestamp_chronology",
+      "status": "WARN",
+      "detail": "{'promised_before_created': 4, 'pickup_before_created': 0, 'actual_before_pickup': 5}",
+      "action": "Retain invalid records but exclude affected duration calculations"
+    },
+    {
+      "check": "orders.freshness",
+      "status": "PASS",
+      "detail": "latest_created_at=2026-08-28 23:33:00 age_days=28",
+      "action": ""
+    },
+    {
+      "check": "order_outcomes.order_id_uniqueness",
+      "status": "PASS",
+      "detail": "duplicate_rows=0",
+      "action": ""
+    },
+    {
+      "check": "orders.customer_id_to_customers",
+      "status": "PASS",
+      "detail": "coverage=100.00% unmapped=0",
+      "action": ""
+    },
+    {
+      "check": "orders.driver_id_to_drivers",
+      "status": "PASS",
+      "detail": "coverage=100.00% unmapped=0",
+      "action": ""
+    },
+    {
+      "check": "orders.restaurant_id_to_restaurants",
+      "status": "PASS",
+      "detail": "coverage=100.00% unmapped=0",
+      "action": ""
+    },
+    {
+      "check": "order_outcomes.order_id_to_orders",
+      "status": "PASS",
+      "detail": "coverage=100.00% unmapped=0",
+      "action": ""
+    },
+    {
+      "check": "dispatch.order_id_to_orders",
+      "status": "PASS",
+      "detail": "coverage=100.00% unmapped=0",
+      "action": ""
+    },
+    {
+      "check": "support_tickets.order_linkage",
+      "status": "WARN",
+      "detail": "unlinked_tickets=3",
+      "action": "Retain as unlinked customer evidence"
+    },
+    {
+      "check": "dispatch.order_set_completeness",
+      "status": "PASS",
+      "detail": "expected_orders=1600 received_orders=1600 missing=0",
+      "action": ""
+    }
+  ]
+}

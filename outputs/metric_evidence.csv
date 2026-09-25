@@ -1,0 +1,6 @@
+metric,value,denominator_note,role
+late_delivery_rate_pct,56.39,"843 / 1,495 measurable delivered outcomes",Outcome KPI
+median_delay_among_late_min,8.03,Late deliveries only,Severity
+median_order_to_pickup_min,26.14,Orders with pickup timestamp,Restaurant/preparation proxy
+customer_friction_rate_pct,19.53,Orders with support/app friction signal,Customer experience
+intervention_rate_pct,27.02,Orders with at least one intervention,Operational response

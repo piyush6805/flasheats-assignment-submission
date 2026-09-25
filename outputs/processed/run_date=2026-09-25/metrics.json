@@ -1,0 +1,17 @@
+{
+  "orders_in_journey": 1600,
+  "measurable_deliveries": 1495,
+  "unknown_outcomes": 37,
+  "late_delivery_count": 843,
+  "late_delivery_rate_pct": 56.39,
+  "meaningfully_late_count_gt_10_min": 349,
+  "meaningfully_late_rate_pct_gt_10_min": 23.34,
+  "median_delay_among_late_min": 8.03,
+  "median_order_to_pickup_min": 26.14,
+  "customer_friction_orders": 292,
+  "customer_friction_rate_pct": 19.53,
+  "intervention_orders": 404,
+  "intervention_rate_pct": 27.02,
+  "raw_timestamp_measurable_deliveries": 754,
+  "raw_timestamp_late_rate_pct": 57.03
+}

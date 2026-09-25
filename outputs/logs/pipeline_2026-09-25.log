@@ -1,0 +1,518 @@
+2026-09-25 12:59:37,764 | INFO | Pipeline started | run_date=2026-09-25 chaos=none
+2026-09-25 12:59:39,877 | ERROR | Pipeline failed unexpectedly | <urlopen error [WinError 10061] No connection could be made because the target machine actively refused it>
+Traceback (most recent call last):
+  File "C:\Users\piyus\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\urllib\request.py", line 1344, in do_open
+    h.request(req.get_method(), req.selector, req.data, headers,
+  File "C:\Users\piyus\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\http\client.py", line 1386, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Users\piyus\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\http\client.py", line 1432, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Users\piyus\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\http\client.py", line 1381, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\piyus\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\http\client.py", line 1141, in _send_output
+    self.send(msg)
+  File "C:\Users\piyus\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\http\client.py", line 1085, in send
+    self.connect()
+  File "C:\Users\piyus\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\http\client.py", line 1051, in connect
+    self.sock = self._create_connection(
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\piyus\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\socket.py", line 865, in create_connection
+    raise exceptions[0]
+  File "C:\Users\piyus\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\socket.py", line 850, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] No connection could be made because the target machine actively refused it
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\piyus\Downloads\FDE\flasheats-assignment-submission\src\run_pipeline.py", line 61, in run
+    api_process = _start_api(config, logger)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\piyus\Downloads\FDE\flasheats-assignment-submission\src\run_pipeline.py", line 42, in _start_api
+    if _wait_for_api(config.api_url, timeout_seconds=1):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\piyus\Downloads\FDE\flasheats-assignment-submission\src\flasheats_pipeline\extract.py", line 103, in _wait_for_api
+    status, _, _ = _get_json(f"{api_url}/health", {})
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\piyus\Downloads\FDE\flasheats-assignment-submission\src\flasheats_pipeline\extract.py", line 88, in _get_json
+    with request.urlopen(target, timeout=timeout) as response:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\piyus\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\urllib\request.py", line 215, in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\piyus\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\urllib\request.py", line 515, in open
+    response = self._open(req, data)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\piyus\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\urllib\request.py", line 532, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\piyus\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\urllib\request.py", line 492, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "C:\Users\piyus\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\urllib\request.py", line 1373, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\piyus\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\urllib\request.py", line 1347, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [WinError 10061] No connection could be made because the target machine actively refused it>
+2026-09-25 12:59:57,360 | INFO | Pipeline started | run_date=2026-09-25 chaos=none
+2026-09-25 13:00:00,244 | INFO | Started local Dispatch API
+2026-09-25 13:00:00,447 | INFO | Extracted local sources | orders=1603 outcomes=1600 interventions=430 files=11
+2026-09-25 13:00:00,477 | INFO | Fetched Dispatch page | page=1 rows=50 cumulative=50
+2026-09-25 13:00:00,494 | INFO | Fetched Dispatch page | page=2 rows=50 cumulative=100
+2026-09-25 13:00:00,497 | WARNING | Retrying Dispatch API | page=3 status=500 attempt=1/3 wait=0.25s
+2026-09-25 13:00:00,759 | INFO | Fetched Dispatch page | page=3 rows=50 cumulative=150
+2026-09-25 13:00:00,764 | INFO | Fetched Dispatch page | page=4 rows=50 cumulative=200
+2026-09-25 13:00:00,766 | WARNING | Retrying Dispatch API | page=5 status=429 attempt=1/3 wait=0.25s
+2026-09-25 13:00:01,025 | INFO | Fetched Dispatch page | page=5 rows=50 cumulative=250
+2026-09-25 13:00:01,052 | INFO | Fetched Dispatch page | page=6 rows=50 cumulative=300
+2026-09-25 13:00:01,060 | INFO | Fetched Dispatch page | page=7 rows=50 cumulative=350
+2026-09-25 13:00:01,065 | INFO | Fetched Dispatch page | page=8 rows=50 cumulative=400
+2026-09-25 13:00:01,082 | INFO | Fetched Dispatch page | page=9 rows=50 cumulative=450
+2026-09-25 13:00:01,086 | INFO | Fetched Dispatch page | page=10 rows=50 cumulative=500
+2026-09-25 13:00:01,113 | INFO | Fetched Dispatch page | page=11 rows=50 cumulative=550
+2026-09-25 13:00:01,118 | INFO | Fetched Dispatch page | page=12 rows=50 cumulative=600
+2026-09-25 13:00:01,122 | INFO | Fetched Dispatch page | page=13 rows=50 cumulative=650
+2026-09-25 13:00:01,124 | INFO | Fetched Dispatch page | page=14 rows=50 cumulative=700
+2026-09-25 13:00:01,130 | INFO | Fetched Dispatch page | page=15 rows=50 cumulative=750
+2026-09-25 13:00:01,138 | INFO | Fetched Dispatch page | page=16 rows=50 cumulative=800
+2026-09-25 13:00:01,146 | INFO | Fetched Dispatch page | page=17 rows=50 cumulative=850
+2026-09-25 13:00:01,156 | INFO | Fetched Dispatch page | page=18 rows=50 cumulative=900
+2026-09-25 13:00:01,176 | INFO | Fetched Dispatch page | page=19 rows=50 cumulative=950
+2026-09-25 13:00:01,208 | INFO | Fetched Dispatch page | page=20 rows=50 cumulative=1000
+2026-09-25 13:00:01,215 | INFO | Fetched Dispatch page | page=21 rows=50 cumulative=1050
+2026-09-25 13:00:01,221 | INFO | Fetched Dispatch page | page=22 rows=50 cumulative=1100
+2026-09-25 13:00:01,228 | INFO | Fetched Dispatch page | page=23 rows=50 cumulative=1150
+2026-09-25 13:00:01,236 | INFO | Fetched Dispatch page | page=24 rows=50 cumulative=1200
+2026-09-25 13:00:01,243 | INFO | Fetched Dispatch page | page=25 rows=50 cumulative=1250
+2026-09-25 13:00:01,248 | INFO | Fetched Dispatch page | page=26 rows=50 cumulative=1300
+2026-09-25 13:00:01,270 | INFO | Fetched Dispatch page | page=27 rows=50 cumulative=1350
+2026-09-25 13:00:01,275 | INFO | Fetched Dispatch page | page=28 rows=50 cumulative=1400
+2026-09-25 13:00:01,280 | INFO | Fetched Dispatch page | page=29 rows=50 cumulative=1450
+2026-09-25 13:00:01,286 | INFO | Fetched Dispatch page | page=30 rows=50 cumulative=1500
+2026-09-25 13:00:01,291 | INFO | Fetched Dispatch page | page=31 rows=50 cumulative=1550
+2026-09-25 13:00:01,296 | INFO | Fetched Dispatch page | page=32 rows=50 cumulative=1600
+2026-09-25 13:00:01,302 | INFO | Dispatch extraction complete | records=1600 pages=32
+2026-09-25 13:00:01,399 | INFO | Validation | check=orders.required_columns status=PASS detail=9 required columns present
+2026-09-25 13:00:01,400 | INFO | Validation | check=order_outcomes.required_columns status=PASS detail=6 required columns present
+2026-09-25 13:00:01,400 | INFO | Validation | check=dispatch.required_columns status=PASS detail=3 required columns present
+2026-09-25 13:00:01,400 | INFO | Validation | check=orders.order_id_uniqueness status=WARN detail=duplicate_order_ids=3 duplicate_rows_involved=6
+2026-09-25 13:00:01,400 | INFO | Validation | check=orders.delivered_completion_timestamp status=WARN detail=delivered_rows_missing_actual_delivery_at=37
+2026-09-25 13:00:01,401 | INFO | Validation | check=orders.timestamp_chronology status=WARN detail={'promised_before_created': 4, 'pickup_before_created': 0, 'actual_before_pickup': 5}
+2026-09-25 13:00:01,401 | INFO | Validation | check=orders.freshness status=PASS detail=latest_created_at=2026-08-28 23:33:00 age_days=28
+2026-09-25 13:00:01,401 | INFO | Validation | check=order_outcomes.order_id_uniqueness status=PASS detail=duplicate_rows=0
+2026-09-25 13:00:01,402 | INFO | Validation | check=orders.customer_id_to_customers status=PASS detail=coverage=100.00% unmapped=0
+2026-09-25 13:00:01,402 | INFO | Validation | check=orders.driver_id_to_drivers status=PASS detail=coverage=100.00% unmapped=0
+2026-09-25 13:00:01,402 | INFO | Validation | check=orders.restaurant_id_to_restaurants status=PASS detail=coverage=100.00% unmapped=0
+2026-09-25 13:00:01,402 | INFO | Validation | check=order_outcomes.order_id_to_orders status=PASS detail=coverage=100.00% unmapped=0
+2026-09-25 13:00:01,403 | INFO | Validation | check=dispatch.order_id_to_orders status=PASS detail=coverage=100.00% unmapped=0
+2026-09-25 13:00:01,403 | INFO | Validation | check=support_tickets.order_linkage status=WARN detail=unlinked_tickets=3
+2026-09-25 13:00:01,404 | INFO | Validation | check=dispatch.order_set_completeness status=PASS detail=expected_orders=1600 received_orders=1600 missing=0
+2026-09-25 13:00:02,342 | ERROR | Pipeline failed unexpectedly | 'list' object has no attribute 'groupby'
+Traceback (most recent call last):
+  File "C:\Users\piyus\Downloads\FDE\flasheats-assignment-submission\src\run_pipeline.py", line 74, in run
+    journey = build_order_journey(sources, dispatch, logger)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\piyus\Downloads\FDE\flasheats-assignment-submission\src\flasheats_pipeline\model.py", line 66, in build_order_journey
+    for summary in _aggregate_sources(sources):
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\piyus\Downloads\FDE\flasheats-assignment-submission\src\flasheats_pipeline\model.py", line 40, in _aggregate_sources
+    driver_summary = driver_events.groupby("order_id").agg(
+                     ^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'groupby'
+2026-09-25 13:00:21,406 | INFO | Pipeline started | run_date=2026-09-25 chaos=none
+2026-09-25 13:00:24,259 | INFO | Started local Dispatch API
+2026-09-25 13:00:24,446 | INFO | Extracted local sources | orders=1603 outcomes=1600 interventions=430 files=11
+2026-09-25 13:00:24,462 | INFO | Fetched Dispatch page | page=1 rows=50 cumulative=50
+2026-09-25 13:00:24,470 | INFO | Fetched Dispatch page | page=2 rows=50 cumulative=100
+2026-09-25 13:00:24,473 | WARNING | Retrying Dispatch API | page=3 status=500 attempt=1/3 wait=0.25s
+2026-09-25 13:00:24,730 | INFO | Fetched Dispatch page | page=3 rows=50 cumulative=150
+2026-09-25 13:00:24,736 | INFO | Fetched Dispatch page | page=4 rows=50 cumulative=200
+2026-09-25 13:00:24,739 | WARNING | Retrying Dispatch API | page=5 status=429 attempt=1/3 wait=0.25s
+2026-09-25 13:00:24,996 | INFO | Fetched Dispatch page | page=5 rows=50 cumulative=250
+2026-09-25 13:00:25,002 | INFO | Fetched Dispatch page | page=6 rows=50 cumulative=300
+2026-09-25 13:00:25,009 | INFO | Fetched Dispatch page | page=7 rows=50 cumulative=350
+2026-09-25 13:00:25,038 | INFO | Fetched Dispatch page | page=8 rows=50 cumulative=400
+2026-09-25 13:00:25,045 | INFO | Fetched Dispatch page | page=9 rows=50 cumulative=450
+2026-09-25 13:00:25,052 | INFO | Fetched Dispatch page | page=10 rows=50 cumulative=500
+2026-09-25 13:00:25,061 | INFO | Fetched Dispatch page | page=11 rows=50 cumulative=550
+2026-09-25 13:00:25,068 | INFO | Fetched Dispatch page | page=12 rows=50 cumulative=600
+2026-09-25 13:00:25,074 | INFO | Fetched Dispatch page | page=13 rows=50 cumulative=650
+2026-09-25 13:00:25,079 | INFO | Fetched Dispatch page | page=14 rows=50 cumulative=700
+2026-09-25 13:00:25,083 | INFO | Fetched Dispatch page | page=15 rows=50 cumulative=750
+2026-09-25 13:00:25,088 | INFO | Fetched Dispatch page | page=16 rows=50 cumulative=800
+2026-09-25 13:00:25,095 | INFO | Fetched Dispatch page | page=17 rows=50 cumulative=850
+2026-09-25 13:00:25,099 | INFO | Fetched Dispatch page | page=18 rows=50 cumulative=900
+2026-09-25 13:00:25,104 | INFO | Fetched Dispatch page | page=19 rows=50 cumulative=950
+2026-09-25 13:00:25,110 | INFO | Fetched Dispatch page | page=20 rows=50 cumulative=1000
+2026-09-25 13:00:25,132 | INFO | Fetched Dispatch page | page=21 rows=50 cumulative=1050
+2026-09-25 13:00:25,139 | INFO | Fetched Dispatch page | page=22 rows=50 cumulative=1100
+2026-09-25 13:00:25,146 | INFO | Fetched Dispatch page | page=23 rows=50 cumulative=1150
+2026-09-25 13:00:25,151 | INFO | Fetched Dispatch page | page=24 rows=50 cumulative=1200
+2026-09-25 13:00:25,157 | INFO | Fetched Dispatch page | page=25 rows=50 cumulative=1250
+2026-09-25 13:00:25,162 | INFO | Fetched Dispatch page | page=26 rows=50 cumulative=1300
+2026-09-25 13:00:25,166 | INFO | Fetched Dispatch page | page=27 rows=50 cumulative=1350
+2026-09-25 13:00:25,191 | INFO | Fetched Dispatch page | page=28 rows=50 cumulative=1400
+2026-09-25 13:00:25,196 | INFO | Fetched Dispatch page | page=29 rows=50 cumulative=1450
+2026-09-25 13:00:25,201 | INFO | Fetched Dispatch page | page=30 rows=50 cumulative=1500
+2026-09-25 13:00:25,206 | INFO | Fetched Dispatch page | page=31 rows=50 cumulative=1550
+2026-09-25 13:00:25,213 | INFO | Fetched Dispatch page | page=32 rows=50 cumulative=1600
+2026-09-25 13:00:25,216 | INFO | Dispatch extraction complete | records=1600 pages=32
+2026-09-25 13:00:25,278 | INFO | Validation | check=orders.required_columns status=PASS detail=9 required columns present
+2026-09-25 13:00:25,279 | INFO | Validation | check=order_outcomes.required_columns status=PASS detail=6 required columns present
+2026-09-25 13:00:25,279 | INFO | Validation | check=dispatch.required_columns status=PASS detail=3 required columns present
+2026-09-25 13:00:25,279 | INFO | Validation | check=orders.order_id_uniqueness status=WARN detail=duplicate_order_ids=3 duplicate_rows_involved=6
+2026-09-25 13:00:25,279 | INFO | Validation | check=orders.delivered_completion_timestamp status=WARN detail=delivered_rows_missing_actual_delivery_at=37
+2026-09-25 13:00:25,280 | INFO | Validation | check=orders.timestamp_chronology status=WARN detail={'promised_before_created': 4, 'pickup_before_created': 0, 'actual_before_pickup': 5}
+2026-09-25 13:00:25,280 | INFO | Validation | check=orders.freshness status=PASS detail=latest_created_at=2026-08-28 23:33:00 age_days=28
+2026-09-25 13:00:25,281 | INFO | Validation | check=order_outcomes.order_id_uniqueness status=PASS detail=duplicate_rows=0
+2026-09-25 13:00:25,281 | INFO | Validation | check=orders.customer_id_to_customers status=PASS detail=coverage=100.00% unmapped=0
+2026-09-25 13:00:25,282 | INFO | Validation | check=orders.driver_id_to_drivers status=PASS detail=coverage=100.00% unmapped=0
+2026-09-25 13:00:25,282 | INFO | Validation | check=orders.restaurant_id_to_restaurants status=PASS detail=coverage=100.00% unmapped=0
+2026-09-25 13:00:25,283 | INFO | Validation | check=order_outcomes.order_id_to_orders status=PASS detail=coverage=100.00% unmapped=0
+2026-09-25 13:00:25,283 | INFO | Validation | check=dispatch.order_id_to_orders status=PASS detail=coverage=100.00% unmapped=0
+2026-09-25 13:00:25,283 | INFO | Validation | check=support_tickets.order_linkage status=WARN detail=unlinked_tickets=3
+2026-09-25 13:00:25,284 | INFO | Validation | check=dispatch.order_set_completeness status=PASS detail=expected_orders=1600 received_orders=1600 missing=0
+2026-09-25 13:00:26,893 | INFO | Built order_journey | rows=1600 duplicate_source_flags=3
+2026-09-25 13:00:26,978 | INFO | Pipeline completed | gate=WARN rows=1600
+2026-09-25 13:01:33,048 | INFO | Pipeline started | run_date=2026-09-25 chaos=none
+2026-09-25 13:01:35,918 | INFO | Started local Dispatch API
+2026-09-25 13:01:36,144 | INFO | Extracted local sources | orders=1603 outcomes=1600 interventions=430 files=11
+2026-09-25 13:01:36,155 | INFO | Fetched Dispatch page | page=1 rows=50 cumulative=50
+2026-09-25 13:01:36,165 | INFO | Fetched Dispatch page | page=2 rows=50 cumulative=100
+2026-09-25 13:01:36,170 | WARNING | Retrying Dispatch API | page=3 status=500 attempt=1/3 wait=0.25s
+2026-09-25 13:01:36,443 | INFO | Fetched Dispatch page | page=3 rows=50 cumulative=150
+2026-09-25 13:01:36,447 | INFO | Fetched Dispatch page | page=4 rows=50 cumulative=200
+2026-09-25 13:01:36,449 | WARNING | Retrying Dispatch API | page=5 status=429 attempt=1/3 wait=0.25s
+2026-09-25 13:01:36,703 | INFO | Fetched Dispatch page | page=5 rows=50 cumulative=250
+2026-09-25 13:01:36,708 | INFO | Fetched Dispatch page | page=6 rows=50 cumulative=300
+2026-09-25 13:01:36,712 | INFO | Fetched Dispatch page | page=7 rows=50 cumulative=350
+2026-09-25 13:01:36,715 | INFO | Fetched Dispatch page | page=8 rows=50 cumulative=400
+2026-09-25 13:01:36,718 | INFO | Fetched Dispatch page | page=9 rows=50 cumulative=450
+2026-09-25 13:01:36,721 | INFO | Fetched Dispatch page | page=10 rows=50 cumulative=500
+2026-09-25 13:01:36,739 | INFO | Fetched Dispatch page | page=11 rows=50 cumulative=550
+2026-09-25 13:01:36,743 | INFO | Fetched Dispatch page | page=12 rows=50 cumulative=600
+2026-09-25 13:01:36,746 | INFO | Fetched Dispatch page | page=13 rows=50 cumulative=650
+2026-09-25 13:01:36,750 | INFO | Fetched Dispatch page | page=14 rows=50 cumulative=700
+2026-09-25 13:01:36,753 | INFO | Fetched Dispatch page | page=15 rows=50 cumulative=750
+2026-09-25 13:01:36,756 | INFO | Fetched Dispatch page | page=16 rows=50 cumulative=800
+2026-09-25 13:01:36,759 | INFO | Fetched Dispatch page | page=17 rows=50 cumulative=850
+2026-09-25 13:01:36,763 | INFO | Fetched Dispatch page | page=18 rows=50 cumulative=900
+2026-09-25 13:01:36,766 | INFO | Fetched Dispatch page | page=19 rows=50 cumulative=950
+2026-09-25 13:01:36,769 | INFO | Fetched Dispatch page | page=20 rows=50 cumulative=1000
+2026-09-25 13:01:36,786 | INFO | Fetched Dispatch page | page=21 rows=50 cumulative=1050
+2026-09-25 13:01:36,790 | INFO | Fetched Dispatch page | page=22 rows=50 cumulative=1100
+2026-09-25 13:01:36,793 | INFO | Fetched Dispatch page | page=23 rows=50 cumulative=1150
+2026-09-25 13:01:36,796 | INFO | Fetched Dispatch page | page=24 rows=50 cumulative=1200
+2026-09-25 13:01:36,799 | INFO | Fetched Dispatch page | page=25 rows=50 cumulative=1250
+2026-09-25 13:01:36,802 | INFO | Fetched Dispatch page | page=26 rows=50 cumulative=1300
+2026-09-25 13:01:36,806 | INFO | Fetched Dispatch page | page=27 rows=50 cumulative=1350
+2026-09-25 13:01:36,808 | INFO | Fetched Dispatch page | page=28 rows=50 cumulative=1400
+2026-09-25 13:01:36,832 | INFO | Fetched Dispatch page | page=29 rows=50 cumulative=1450
+2026-09-25 13:01:36,835 | INFO | Fetched Dispatch page | page=30 rows=50 cumulative=1500
+2026-09-25 13:01:36,839 | INFO | Fetched Dispatch page | page=31 rows=50 cumulative=1550
+2026-09-25 13:01:36,843 | INFO | Fetched Dispatch page | page=32 rows=50 cumulative=1600
+2026-09-25 13:01:36,847 | INFO | Dispatch extraction complete | records=1600 pages=32
+2026-09-25 13:01:36,906 | INFO | Validation | check=orders.required_columns status=PASS detail=9 required columns present
+2026-09-25 13:01:36,906 | INFO | Validation | check=order_outcomes.required_columns status=PASS detail=6 required columns present
+2026-09-25 13:01:36,906 | INFO | Validation | check=dispatch.required_columns status=PASS detail=3 required columns present
+2026-09-25 13:01:36,906 | INFO | Validation | check=orders.order_id_uniqueness status=WARN detail=duplicate_order_ids=3 duplicate_rows_involved=6
+2026-09-25 13:01:36,906 | INFO | Validation | check=orders.delivered_completion_timestamp status=WARN detail=delivered_rows_missing_actual_delivery_at=37
+2026-09-25 13:01:36,907 | INFO | Validation | check=orders.timestamp_chronology status=WARN detail={'promised_before_created': 4, 'pickup_before_created': 0, 'actual_before_pickup': 5}
+2026-09-25 13:01:36,907 | INFO | Validation | check=orders.freshness status=PASS detail=latest_created_at=2026-08-28 23:33:00 age_days=28
+2026-09-25 13:01:36,907 | INFO | Validation | check=order_outcomes.order_id_uniqueness status=PASS detail=duplicate_rows=0
+2026-09-25 13:01:36,907 | INFO | Validation | check=orders.customer_id_to_customers status=PASS detail=coverage=100.00% unmapped=0
+2026-09-25 13:01:36,907 | INFO | Validation | check=orders.driver_id_to_drivers status=PASS detail=coverage=100.00% unmapped=0
+2026-09-25 13:01:36,908 | INFO | Validation | check=orders.restaurant_id_to_restaurants status=PASS detail=coverage=100.00% unmapped=0
+2026-09-25 13:01:36,908 | INFO | Validation | check=order_outcomes.order_id_to_orders status=PASS detail=coverage=100.00% unmapped=0
+2026-09-25 13:01:36,908 | INFO | Validation | check=dispatch.order_id_to_orders status=PASS detail=coverage=100.00% unmapped=0
+2026-09-25 13:01:36,908 | INFO | Validation | check=support_tickets.order_linkage status=WARN detail=unlinked_tickets=3
+2026-09-25 13:01:36,908 | INFO | Validation | check=dispatch.order_set_completeness status=PASS detail=expected_orders=1600 received_orders=1600 missing=0
+2026-09-25 13:01:38,100 | INFO | Built order_journey | rows=1600 duplicate_source_flags=3
+2026-09-25 13:01:38,162 | INFO | Pipeline completed | gate=WARN rows=1600
+2026-09-25 13:02:02,804 | INFO | Pipeline started | run_date=2026-09-25 chaos=missing_column
+2026-09-25 13:02:05,670 | INFO | Started local Dispatch API
+2026-09-25 13:02:05,824 | INFO | Extracted local sources | orders=1603 outcomes=1600 interventions=430 files=11
+2026-09-25 13:02:05,826 | WARNING | CHAOS: removing promised_eta
+2026-09-25 13:02:05,844 | INFO | Fetched Dispatch page | page=1 rows=50 cumulative=50
+2026-09-25 13:02:05,851 | INFO | Fetched Dispatch page | page=2 rows=50 cumulative=100
+2026-09-25 13:02:05,854 | WARNING | Retrying Dispatch API | page=3 status=500 attempt=1/3 wait=0.25s
+2026-09-25 13:02:06,126 | INFO | Fetched Dispatch page | page=3 rows=50 cumulative=150
+2026-09-25 13:02:06,131 | INFO | Fetched Dispatch page | page=4 rows=50 cumulative=200
+2026-09-25 13:02:06,135 | WARNING | Retrying Dispatch API | page=5 status=429 attempt=1/3 wait=0.25s
+2026-09-25 13:02:06,404 | INFO | Fetched Dispatch page | page=5 rows=50 cumulative=250
+2026-09-25 13:02:06,420 | INFO | Fetched Dispatch page | page=6 rows=50 cumulative=300
+2026-09-25 13:02:06,425 | INFO | Fetched Dispatch page | page=7 rows=50 cumulative=350
+2026-09-25 13:02:06,430 | INFO | Fetched Dispatch page | page=8 rows=50 cumulative=400
+2026-09-25 13:02:06,436 | INFO | Fetched Dispatch page | page=9 rows=50 cumulative=450
+2026-09-25 13:02:06,450 | INFO | Fetched Dispatch page | page=10 rows=50 cumulative=500
+2026-09-25 13:02:06,466 | INFO | Fetched Dispatch page | page=11 rows=50 cumulative=550
+2026-09-25 13:02:06,474 | INFO | Fetched Dispatch page | page=12 rows=50 cumulative=600
+2026-09-25 13:02:06,498 | INFO | Fetched Dispatch page | page=13 rows=50 cumulative=650
+2026-09-25 13:02:06,508 | INFO | Fetched Dispatch page | page=14 rows=50 cumulative=700
+2026-09-25 13:02:06,531 | INFO | Fetched Dispatch page | page=15 rows=50 cumulative=750
+2026-09-25 13:02:06,539 | INFO | Fetched Dispatch page | page=16 rows=50 cumulative=800
+2026-09-25 13:02:06,560 | INFO | Fetched Dispatch page | page=17 rows=50 cumulative=850
+2026-09-25 13:02:06,568 | INFO | Fetched Dispatch page | page=18 rows=50 cumulative=900
+2026-09-25 13:02:06,578 | INFO | Fetched Dispatch page | page=19 rows=50 cumulative=950
+2026-09-25 13:02:06,605 | INFO | Fetched Dispatch page | page=20 rows=50 cumulative=1000
+2026-09-25 13:02:06,612 | INFO | Fetched Dispatch page | page=21 rows=50 cumulative=1050
+2026-09-25 13:02:06,618 | INFO | Fetched Dispatch page | page=22 rows=50 cumulative=1100
+2026-09-25 13:02:06,624 | INFO | Fetched Dispatch page | page=23 rows=50 cumulative=1150
+2026-09-25 13:02:06,629 | INFO | Fetched Dispatch page | page=24 rows=50 cumulative=1200
+2026-09-25 13:02:06,635 | INFO | Fetched Dispatch page | page=25 rows=50 cumulative=1250
+2026-09-25 13:02:06,641 | INFO | Fetched Dispatch page | page=26 rows=50 cumulative=1300
+2026-09-25 13:02:06,648 | INFO | Fetched Dispatch page | page=27 rows=50 cumulative=1350
+2026-09-25 13:02:06,655 | INFO | Fetched Dispatch page | page=28 rows=50 cumulative=1400
+2026-09-25 13:02:06,664 | INFO | Fetched Dispatch page | page=29 rows=50 cumulative=1450
+2026-09-25 13:02:06,669 | INFO | Fetched Dispatch page | page=30 rows=50 cumulative=1500
+2026-09-25 13:02:06,675 | INFO | Fetched Dispatch page | page=31 rows=50 cumulative=1550
+2026-09-25 13:02:06,682 | INFO | Fetched Dispatch page | page=32 rows=50 cumulative=1600
+2026-09-25 13:02:06,689 | INFO | Dispatch extraction complete | records=1600 pages=32
+2026-09-25 13:02:06,716 | ERROR | Pipeline stopped at validation gate | orders missing required columns: ['promised_eta']
+2026-09-25 13:02:23,457 | INFO | Pipeline started | run_date=2026-09-25 chaos=missing_column
+2026-09-25 13:02:26,295 | INFO | Started local Dispatch API
+2026-09-25 13:02:26,510 | INFO | Extracted local sources | orders=1603 outcomes=1600 interventions=430 files=11
+2026-09-25 13:02:26,513 | WARNING | CHAOS: removing promised_eta
+2026-09-25 13:02:26,531 | INFO | Fetched Dispatch page | page=1 rows=50 cumulative=50
+2026-09-25 13:02:26,546 | INFO | Fetched Dispatch page | page=2 rows=50 cumulative=100
+2026-09-25 13:02:26,551 | WARNING | Retrying Dispatch API | page=3 status=500 attempt=1/3 wait=0.25s
+2026-09-25 13:02:26,828 | INFO | Fetched Dispatch page | page=3 rows=50 cumulative=150
+2026-09-25 13:02:26,836 | INFO | Fetched Dispatch page | page=4 rows=50 cumulative=200
+2026-09-25 13:02:26,843 | WARNING | Retrying Dispatch API | page=5 status=429 attempt=1/3 wait=0.25s
+2026-09-25 13:02:27,101 | INFO | Fetched Dispatch page | page=5 rows=50 cumulative=250
+2026-09-25 13:02:27,109 | INFO | Fetched Dispatch page | page=6 rows=50 cumulative=300
+2026-09-25 13:02:27,121 | INFO | Fetched Dispatch page | page=7 rows=50 cumulative=350
+2026-09-25 13:02:27,129 | INFO | Fetched Dispatch page | page=8 rows=50 cumulative=400
+2026-09-25 13:02:27,136 | INFO | Fetched Dispatch page | page=9 rows=50 cumulative=450
+2026-09-25 13:02:27,145 | INFO | Fetched Dispatch page | page=10 rows=50 cumulative=500
+2026-09-25 13:02:27,154 | INFO | Fetched Dispatch page | page=11 rows=50 cumulative=550
+2026-09-25 13:02:27,163 | INFO | Fetched Dispatch page | page=12 rows=50 cumulative=600
+2026-09-25 13:02:27,169 | INFO | Fetched Dispatch page | page=13 rows=50 cumulative=650
+2026-09-25 13:02:27,174 | INFO | Fetched Dispatch page | page=14 rows=50 cumulative=700
+2026-09-25 13:02:27,181 | INFO | Fetched Dispatch page | page=15 rows=50 cumulative=750
+2026-09-25 13:02:27,188 | INFO | Fetched Dispatch page | page=16 rows=50 cumulative=800
+2026-09-25 13:02:27,196 | INFO | Fetched Dispatch page | page=17 rows=50 cumulative=850
+2026-09-25 13:02:27,204 | INFO | Fetched Dispatch page | page=18 rows=50 cumulative=900
+2026-09-25 13:02:27,209 | INFO | Fetched Dispatch page | page=19 rows=50 cumulative=950
+2026-09-25 13:02:27,214 | INFO | Fetched Dispatch page | page=20 rows=50 cumulative=1000
+2026-09-25 13:02:27,220 | INFO | Fetched Dispatch page | page=21 rows=50 cumulative=1050
+2026-09-25 13:02:27,225 | INFO | Fetched Dispatch page | page=22 rows=50 cumulative=1100
+2026-09-25 13:02:27,229 | INFO | Fetched Dispatch page | page=23 rows=50 cumulative=1150
+2026-09-25 13:02:27,234 | INFO | Fetched Dispatch page | page=24 rows=50 cumulative=1200
+2026-09-25 13:02:27,240 | INFO | Fetched Dispatch page | page=25 rows=50 cumulative=1250
+2026-09-25 13:02:27,247 | INFO | Fetched Dispatch page | page=26 rows=50 cumulative=1300
+2026-09-25 13:02:27,252 | INFO | Fetched Dispatch page | page=27 rows=50 cumulative=1350
+2026-09-25 13:02:27,256 | INFO | Fetched Dispatch page | page=28 rows=50 cumulative=1400
+2026-09-25 13:02:27,262 | INFO | Fetched Dispatch page | page=29 rows=50 cumulative=1450
+2026-09-25 13:02:27,266 | INFO | Fetched Dispatch page | page=30 rows=50 cumulative=1500
+2026-09-25 13:02:27,272 | INFO | Fetched Dispatch page | page=31 rows=50 cumulative=1550
+2026-09-25 13:02:27,278 | INFO | Fetched Dispatch page | page=32 rows=50 cumulative=1600
+2026-09-25 13:02:27,283 | INFO | Dispatch extraction complete | records=1600 pages=32
+2026-09-25 13:02:27,308 | ERROR | Pipeline stopped at validation gate | orders missing required columns: ['promised_eta']
+2026-09-25 13:02:37,686 | INFO | Pipeline started | run_date=2026-09-25 chaos=stale_data
+2026-09-25 13:02:40,569 | INFO | Started local Dispatch API
+2026-09-25 13:02:40,825 | INFO | Extracted local sources | orders=1603 outcomes=1600 interventions=430 files=11
+2026-09-25 13:02:40,827 | WARNING | CHAOS: shifting created_at one year backward
+2026-09-25 13:02:40,869 | INFO | Fetched Dispatch page | page=1 rows=50 cumulative=50
+2026-09-25 13:02:40,878 | INFO | Fetched Dispatch page | page=2 rows=50 cumulative=100
+2026-09-25 13:02:40,883 | WARNING | Retrying Dispatch API | page=3 status=500 attempt=1/3 wait=0.25s
+2026-09-25 13:02:41,141 | INFO | Fetched Dispatch page | page=3 rows=50 cumulative=150
+2026-09-25 13:02:41,150 | INFO | Fetched Dispatch page | page=4 rows=50 cumulative=200
+2026-09-25 13:02:41,154 | WARNING | Retrying Dispatch API | page=5 status=429 attempt=1/3 wait=0.25s
+2026-09-25 13:02:41,429 | INFO | Fetched Dispatch page | page=5 rows=50 cumulative=250
+2026-09-25 13:02:41,441 | INFO | Fetched Dispatch page | page=6 rows=50 cumulative=300
+2026-09-25 13:02:41,456 | INFO | Fetched Dispatch page | page=7 rows=50 cumulative=350
+2026-09-25 13:02:41,469 | INFO | Fetched Dispatch page | page=8 rows=50 cumulative=400
+2026-09-25 13:02:41,480 | INFO | Fetched Dispatch page | page=9 rows=50 cumulative=450
+2026-09-25 13:02:41,491 | INFO | Fetched Dispatch page | page=10 rows=50 cumulative=500
+2026-09-25 13:02:41,503 | INFO | Fetched Dispatch page | page=11 rows=50 cumulative=550
+2026-09-25 13:02:41,514 | INFO | Fetched Dispatch page | page=12 rows=50 cumulative=600
+2026-09-25 13:02:41,526 | INFO | Fetched Dispatch page | page=13 rows=50 cumulative=650
+2026-09-25 13:02:41,534 | INFO | Fetched Dispatch page | page=14 rows=50 cumulative=700
+2026-09-25 13:02:41,547 | INFO | Fetched Dispatch page | page=15 rows=50 cumulative=750
+2026-09-25 13:02:41,569 | INFO | Fetched Dispatch page | page=16 rows=50 cumulative=800
+2026-09-25 13:02:41,580 | INFO | Fetched Dispatch page | page=17 rows=50 cumulative=850
+2026-09-25 13:02:41,592 | INFO | Fetched Dispatch page | page=18 rows=50 cumulative=900
+2026-09-25 13:02:41,600 | INFO | Fetched Dispatch page | page=19 rows=50 cumulative=950
+2026-09-25 13:02:41,607 | INFO | Fetched Dispatch page | page=20 rows=50 cumulative=1000
+2026-09-25 13:02:41,613 | INFO | Fetched Dispatch page | page=21 rows=50 cumulative=1050
+2026-09-25 13:02:41,618 | INFO | Fetched Dispatch page | page=22 rows=50 cumulative=1100
+2026-09-25 13:02:41,622 | INFO | Fetched Dispatch page | page=23 rows=50 cumulative=1150
+2026-09-25 13:02:41,626 | INFO | Fetched Dispatch page | page=24 rows=50 cumulative=1200
+2026-09-25 13:02:41,630 | INFO | Fetched Dispatch page | page=25 rows=50 cumulative=1250
+2026-09-25 13:02:41,634 | INFO | Fetched Dispatch page | page=26 rows=50 cumulative=1300
+2026-09-25 13:02:41,639 | INFO | Fetched Dispatch page | page=27 rows=50 cumulative=1350
+2026-09-25 13:02:41,645 | INFO | Fetched Dispatch page | page=28 rows=50 cumulative=1400
+2026-09-25 13:02:41,651 | INFO | Fetched Dispatch page | page=29 rows=50 cumulative=1450
+2026-09-25 13:02:41,655 | INFO | Fetched Dispatch page | page=30 rows=50 cumulative=1500
+2026-09-25 13:02:41,660 | INFO | Fetched Dispatch page | page=31 rows=50 cumulative=1550
+2026-09-25 13:02:41,664 | INFO | Fetched Dispatch page | page=32 rows=50 cumulative=1600
+2026-09-25 13:02:41,670 | INFO | Dispatch extraction complete | records=1600 pages=32
+2026-09-25 13:02:41,730 | ERROR | Pipeline stopped at validation gate | orders data is stale: age_days=393 allowed=60
+2026-09-25 13:02:55,417 | INFO | Pipeline started | run_date=2026-09-25 chaos=duplicate_order
+2026-09-25 13:02:58,246 | INFO | Started local Dispatch API
+2026-09-25 13:02:58,476 | INFO | Extracted local sources | orders=1603 outcomes=1600 interventions=430 files=11
+2026-09-25 13:02:58,477 | WARNING | CHAOS: adding duplicate order row
+2026-09-25 13:02:58,509 | INFO | Fetched Dispatch page | page=1 rows=50 cumulative=50
+2026-09-25 13:02:58,513 | INFO | Fetched Dispatch page | page=2 rows=50 cumulative=100
+2026-09-25 13:02:58,514 | WARNING | Retrying Dispatch API | page=3 status=500 attempt=1/3 wait=0.25s
+2026-09-25 13:02:58,790 | INFO | Fetched Dispatch page | page=3 rows=50 cumulative=150
+2026-09-25 13:02:58,806 | INFO | Fetched Dispatch page | page=4 rows=50 cumulative=200
+2026-09-25 13:02:58,810 | WARNING | Retrying Dispatch API | page=5 status=429 attempt=1/3 wait=0.25s
+2026-09-25 13:02:59,069 | INFO | Fetched Dispatch page | page=5 rows=50 cumulative=250
+2026-09-25 13:02:59,076 | INFO | Fetched Dispatch page | page=6 rows=50 cumulative=300
+2026-09-25 13:02:59,085 | INFO | Fetched Dispatch page | page=7 rows=50 cumulative=350
+2026-09-25 13:02:59,095 | INFO | Fetched Dispatch page | page=8 rows=50 cumulative=400
+2026-09-25 13:02:59,104 | INFO | Fetched Dispatch page | page=9 rows=50 cumulative=450
+2026-09-25 13:02:59,136 | INFO | Fetched Dispatch page | page=10 rows=50 cumulative=500
+2026-09-25 13:02:59,164 | INFO | Fetched Dispatch page | page=11 rows=50 cumulative=550
+2026-09-25 13:02:59,167 | INFO | Fetched Dispatch page | page=12 rows=50 cumulative=600
+2026-09-25 13:02:59,195 | INFO | Fetched Dispatch page | page=13 rows=50 cumulative=650
+2026-09-25 13:02:59,202 | INFO | Fetched Dispatch page | page=14 rows=50 cumulative=700
+2026-09-25 13:02:59,225 | INFO | Fetched Dispatch page | page=15 rows=50 cumulative=750
+2026-09-25 13:02:59,242 | INFO | Fetched Dispatch page | page=16 rows=50 cumulative=800
+2026-09-25 13:02:59,249 | INFO | Fetched Dispatch page | page=17 rows=50 cumulative=850
+2026-09-25 13:02:59,273 | INFO | Fetched Dispatch page | page=18 rows=50 cumulative=900
+2026-09-25 13:02:59,280 | INFO | Fetched Dispatch page | page=19 rows=50 cumulative=950
+2026-09-25 13:02:59,305 | INFO | Fetched Dispatch page | page=20 rows=50 cumulative=1000
+2026-09-25 13:02:59,322 | INFO | Fetched Dispatch page | page=21 rows=50 cumulative=1050
+2026-09-25 13:02:59,328 | INFO | Fetched Dispatch page | page=22 rows=50 cumulative=1100
+2026-09-25 13:02:59,333 | INFO | Fetched Dispatch page | page=23 rows=50 cumulative=1150
+2026-09-25 13:02:59,352 | INFO | Fetched Dispatch page | page=24 rows=50 cumulative=1200
+2026-09-25 13:02:59,360 | INFO | Fetched Dispatch page | page=25 rows=50 cumulative=1250
+2026-09-25 13:02:59,370 | INFO | Fetched Dispatch page | page=26 rows=50 cumulative=1300
+2026-09-25 13:02:59,381 | INFO | Fetched Dispatch page | page=27 rows=50 cumulative=1350
+2026-09-25 13:02:59,390 | INFO | Fetched Dispatch page | page=28 rows=50 cumulative=1400
+2026-09-25 13:02:59,397 | INFO | Fetched Dispatch page | page=29 rows=50 cumulative=1450
+2026-09-25 13:02:59,402 | INFO | Fetched Dispatch page | page=30 rows=50 cumulative=1500
+2026-09-25 13:02:59,410 | INFO | Fetched Dispatch page | page=31 rows=50 cumulative=1550
+2026-09-25 13:02:59,431 | INFO | Fetched Dispatch page | page=32 rows=50 cumulative=1600
+2026-09-25 13:02:59,436 | INFO | Dispatch extraction complete | records=1600 pages=32
+2026-09-25 13:02:59,506 | INFO | Validation | check=orders.required_columns status=PASS detail=9 required columns present
+2026-09-25 13:02:59,507 | INFO | Validation | check=order_outcomes.required_columns status=PASS detail=6 required columns present
+2026-09-25 13:02:59,507 | INFO | Validation | check=dispatch.required_columns status=PASS detail=3 required columns present
+2026-09-25 13:02:59,507 | INFO | Validation | check=orders.order_id_uniqueness status=WARN detail=duplicate_order_ids=4 duplicate_rows_involved=8
+2026-09-25 13:02:59,507 | INFO | Validation | check=orders.delivered_completion_timestamp status=WARN detail=delivered_rows_missing_actual_delivery_at=37
+2026-09-25 13:02:59,507 | INFO | Validation | check=orders.timestamp_chronology status=WARN detail={'promised_before_created': 4, 'pickup_before_created': 0, 'actual_before_pickup': 5}
+2026-09-25 13:02:59,507 | INFO | Validation | check=orders.freshness status=PASS detail=latest_created_at=2026-08-28 23:33:00 age_days=28
+2026-09-25 13:02:59,507 | INFO | Validation | check=order_outcomes.order_id_uniqueness status=PASS detail=duplicate_rows=0
+2026-09-25 13:02:59,508 | INFO | Validation | check=orders.customer_id_to_customers status=PASS detail=coverage=100.00% unmapped=0
+2026-09-25 13:02:59,508 | INFO | Validation | check=orders.driver_id_to_drivers status=PASS detail=coverage=100.00% unmapped=0
+2026-09-25 13:02:59,508 | INFO | Validation | check=orders.restaurant_id_to_restaurants status=PASS detail=coverage=100.00% unmapped=0
+2026-09-25 13:02:59,508 | INFO | Validation | check=order_outcomes.order_id_to_orders status=PASS detail=coverage=100.00% unmapped=0
+2026-09-25 13:02:59,508 | INFO | Validation | check=dispatch.order_id_to_orders status=PASS detail=coverage=100.00% unmapped=0
+2026-09-25 13:02:59,508 | INFO | Validation | check=support_tickets.order_linkage status=WARN detail=unlinked_tickets=3
+2026-09-25 13:02:59,508 | INFO | Validation | check=dispatch.order_set_completeness status=PASS detail=expected_orders=1600 received_orders=1600 missing=0
+2026-09-25 13:03:01,218 | INFO | Built order_journey | rows=1600 duplicate_source_flags=4
+2026-09-25 13:03:01,333 | INFO | Pipeline completed | gate=WARN rows=1600
+2026-09-25 13:04:06,825 | INFO | Pipeline started | run_date=2026-09-25 chaos=none
+2026-09-25 13:04:09,652 | INFO | Started local Dispatch API
+2026-09-25 13:04:09,821 | INFO | Extracted local sources | orders=1603 outcomes=1600 interventions=430 files=11
+2026-09-25 13:04:09,825 | INFO | Fetched Dispatch page | page=1 rows=50 cumulative=50
+2026-09-25 13:04:09,837 | INFO | Fetched Dispatch page | page=2 rows=50 cumulative=100
+2026-09-25 13:04:09,853 | WARNING | Retrying Dispatch API | page=3 status=500 attempt=1/3 wait=0.25s
+2026-09-25 13:04:10,119 | INFO | Fetched Dispatch page | page=3 rows=50 cumulative=150
+2026-09-25 13:04:10,135 | INFO | Fetched Dispatch page | page=4 rows=50 cumulative=200
+2026-09-25 13:04:10,148 | WARNING | Retrying Dispatch API | page=5 status=429 attempt=1/3 wait=0.25s
+2026-09-25 13:04:10,406 | INFO | Fetched Dispatch page | page=5 rows=50 cumulative=250
+2026-09-25 13:04:10,414 | INFO | Fetched Dispatch page | page=6 rows=50 cumulative=300
+2026-09-25 13:04:10,419 | INFO | Fetched Dispatch page | page=7 rows=50 cumulative=350
+2026-09-25 13:04:10,424 | INFO | Fetched Dispatch page | page=8 rows=50 cumulative=400
+2026-09-25 13:04:10,429 | INFO | Fetched Dispatch page | page=9 rows=50 cumulative=450
+2026-09-25 13:04:10,434 | INFO | Fetched Dispatch page | page=10 rows=50 cumulative=500
+2026-09-25 13:04:10,438 | INFO | Fetched Dispatch page | page=11 rows=50 cumulative=550
+2026-09-25 13:04:10,442 | INFO | Fetched Dispatch page | page=12 rows=50 cumulative=600
+2026-09-25 13:04:10,447 | INFO | Fetched Dispatch page | page=13 rows=50 cumulative=650
+2026-09-25 13:04:10,455 | INFO | Fetched Dispatch page | page=14 rows=50 cumulative=700
+2026-09-25 13:04:10,460 | INFO | Fetched Dispatch page | page=15 rows=50 cumulative=750
+2026-09-25 13:04:10,465 | INFO | Fetched Dispatch page | page=16 rows=50 cumulative=800
+2026-09-25 13:04:10,469 | INFO | Fetched Dispatch page | page=17 rows=50 cumulative=850
+2026-09-25 13:04:10,475 | INFO | Fetched Dispatch page | page=18 rows=50 cumulative=900
+2026-09-25 13:04:10,495 | INFO | Fetched Dispatch page | page=19 rows=50 cumulative=950
+2026-09-25 13:04:10,503 | INFO | Fetched Dispatch page | page=20 rows=50 cumulative=1000
+2026-09-25 13:04:10,512 | INFO | Fetched Dispatch page | page=21 rows=50 cumulative=1050
+2026-09-25 13:04:10,516 | INFO | Fetched Dispatch page | page=22 rows=50 cumulative=1100
+2026-09-25 13:04:10,522 | INFO | Fetched Dispatch page | page=23 rows=50 cumulative=1150
+2026-09-25 13:04:10,526 | INFO | Fetched Dispatch page | page=24 rows=50 cumulative=1200
+2026-09-25 13:04:10,529 | INFO | Fetched Dispatch page | page=25 rows=50 cumulative=1250
+2026-09-25 13:04:10,556 | INFO | Fetched Dispatch page | page=26 rows=50 cumulative=1300
+2026-09-25 13:04:10,562 | INFO | Fetched Dispatch page | page=27 rows=50 cumulative=1350
+2026-09-25 13:04:10,568 | INFO | Fetched Dispatch page | page=28 rows=50 cumulative=1400
+2026-09-25 13:04:10,574 | INFO | Fetched Dispatch page | page=29 rows=50 cumulative=1450
+2026-09-25 13:04:10,580 | INFO | Fetched Dispatch page | page=30 rows=50 cumulative=1500
+2026-09-25 13:04:10,584 | INFO | Fetched Dispatch page | page=31 rows=50 cumulative=1550
+2026-09-25 13:04:10,588 | INFO | Fetched Dispatch page | page=32 rows=50 cumulative=1600
+2026-09-25 13:04:10,593 | INFO | Dispatch extraction complete | records=1600 pages=32
+2026-09-25 13:04:10,656 | INFO | Validation | check=orders.required_columns status=PASS detail=9 required columns present
+2026-09-25 13:04:10,656 | INFO | Validation | check=order_outcomes.required_columns status=PASS detail=6 required columns present
+2026-09-25 13:04:10,656 | INFO | Validation | check=dispatch.required_columns status=PASS detail=3 required columns present
+2026-09-25 13:04:10,657 | INFO | Validation | check=orders.order_id_uniqueness status=WARN detail=duplicate_order_ids=3 duplicate_rows_involved=6
+2026-09-25 13:04:10,657 | INFO | Validation | check=orders.delivered_completion_timestamp status=WARN detail=delivered_rows_missing_actual_delivery_at=37
+2026-09-25 13:04:10,658 | INFO | Validation | check=orders.timestamp_chronology status=WARN detail={'promised_before_created': 4, 'pickup_before_created': 0, 'actual_before_pickup': 5}
+2026-09-25 13:04:10,658 | INFO | Validation | check=orders.freshness status=PASS detail=latest_created_at=2026-08-28 23:33:00 age_days=28
+2026-09-25 13:04:10,658 | INFO | Validation | check=order_outcomes.order_id_uniqueness status=PASS detail=duplicate_rows=0
+2026-09-25 13:04:10,659 | INFO | Validation | check=orders.customer_id_to_customers status=PASS detail=coverage=100.00% unmapped=0
+2026-09-25 13:04:10,660 | INFO | Validation | check=orders.driver_id_to_drivers status=PASS detail=coverage=100.00% unmapped=0
+2026-09-25 13:04:10,660 | INFO | Validation | check=orders.restaurant_id_to_restaurants status=PASS detail=coverage=100.00% unmapped=0
+2026-09-25 13:04:10,661 | INFO | Validation | check=order_outcomes.order_id_to_orders status=PASS detail=coverage=100.00% unmapped=0
+2026-09-25 13:04:10,662 | INFO | Validation | check=dispatch.order_id_to_orders status=PASS detail=coverage=100.00% unmapped=0
+2026-09-25 13:04:10,662 | INFO | Validation | check=support_tickets.order_linkage status=WARN detail=unlinked_tickets=3
+2026-09-25 13:04:10,665 | INFO | Validation | check=dispatch.order_set_completeness status=PASS detail=expected_orders=1600 received_orders=1600 missing=0
+2026-09-25 13:04:12,301 | INFO | Built order_journey | rows=1600 duplicate_source_flags=3
+2026-09-25 13:04:12,370 | INFO | Pipeline completed | gate=WARN rows=1600
+2026-09-25 13:06:22,841 | INFO | Pipeline started | run_date=2026-09-25 chaos=none
+2026-09-25 13:06:25,740 | INFO | Started local Dispatch API
+2026-09-25 13:06:25,897 | INFO | Extracted local sources | orders=1603 outcomes=1600 interventions=430 files=11
+2026-09-25 13:06:25,900 | INFO | Fetched Dispatch page | page=1 rows=50 cumulative=50
+2026-09-25 13:06:25,926 | INFO | Fetched Dispatch page | page=2 rows=50 cumulative=100
+2026-09-25 13:06:25,940 | WARNING | Retrying Dispatch API | page=3 status=500 attempt=1/3 wait=0.25s
+2026-09-25 13:06:26,198 | INFO | Fetched Dispatch page | page=3 rows=50 cumulative=150
+2026-09-25 13:06:26,224 | INFO | Fetched Dispatch page | page=4 rows=50 cumulative=200
+2026-09-25 13:06:26,253 | WARNING | Retrying Dispatch API | page=5 status=429 attempt=1/3 wait=0.25s
+2026-09-25 13:06:26,533 | INFO | Fetched Dispatch page | page=5 rows=50 cumulative=250
+2026-09-25 13:06:26,540 | INFO | Fetched Dispatch page | page=6 rows=50 cumulative=300
+2026-09-25 13:06:26,546 | INFO | Fetched Dispatch page | page=7 rows=50 cumulative=350
+2026-09-25 13:06:26,551 | INFO | Fetched Dispatch page | page=8 rows=50 cumulative=400
+2026-09-25 13:06:26,558 | INFO | Fetched Dispatch page | page=9 rows=50 cumulative=450
+2026-09-25 13:06:26,579 | INFO | Fetched Dispatch page | page=10 rows=50 cumulative=500
+2026-09-25 13:06:26,583 | INFO | Fetched Dispatch page | page=11 rows=50 cumulative=550
+2026-09-25 13:06:26,614 | INFO | Fetched Dispatch page | page=12 rows=50 cumulative=600
+2026-09-25 13:06:26,623 | INFO | Fetched Dispatch page | page=13 rows=50 cumulative=650
+2026-09-25 13:06:26,632 | INFO | Fetched Dispatch page | page=14 rows=50 cumulative=700
+2026-09-25 13:06:26,658 | INFO | Fetched Dispatch page | page=15 rows=50 cumulative=750
+2026-09-25 13:06:26,661 | INFO | Fetched Dispatch page | page=16 rows=50 cumulative=800
+2026-09-25 13:06:26,688 | INFO | Fetched Dispatch page | page=17 rows=50 cumulative=850
+2026-09-25 13:06:26,703 | INFO | Fetched Dispatch page | page=18 rows=50 cumulative=900
+2026-09-25 13:06:26,719 | INFO | Fetched Dispatch page | page=19 rows=50 cumulative=950
+2026-09-25 13:06:26,722 | INFO | Fetched Dispatch page | page=20 rows=50 cumulative=1000
+2026-09-25 13:06:26,735 | INFO | Fetched Dispatch page | page=21 rows=50 cumulative=1050
+2026-09-25 13:06:26,750 | INFO | Fetched Dispatch page | page=22 rows=50 cumulative=1100
+2026-09-25 13:06:26,753 | INFO | Fetched Dispatch page | page=23 rows=50 cumulative=1150
+2026-09-25 13:06:26,757 | INFO | Fetched Dispatch page | page=24 rows=50 cumulative=1200
+2026-09-25 13:06:26,781 | INFO | Fetched Dispatch page | page=25 rows=50 cumulative=1250
+2026-09-25 13:06:26,788 | INFO | Fetched Dispatch page | page=26 rows=50 cumulative=1300
+2026-09-25 13:06:26,793 | INFO | Fetched Dispatch page | page=27 rows=50 cumulative=1350
+2026-09-25 13:06:26,801 | INFO | Fetched Dispatch page | page=28 rows=50 cumulative=1400
+2026-09-25 13:06:26,828 | INFO | Fetched Dispatch page | page=29 rows=50 cumulative=1450
+2026-09-25 13:06:26,859 | INFO | Fetched Dispatch page | page=30 rows=50 cumulative=1500
+2026-09-25 13:06:26,891 | INFO | Fetched Dispatch page | page=31 rows=50 cumulative=1550
+2026-09-25 13:06:26,899 | INFO | Fetched Dispatch page | page=32 rows=50 cumulative=1600
+2026-09-25 13:06:26,906 | INFO | Dispatch extraction complete | records=1600 pages=32
+2026-09-25 13:06:26,992 | INFO | Validation | check=orders.required_columns status=PASS detail=9 required columns present
+2026-09-25 13:06:26,993 | INFO | Validation | check=order_outcomes.required_columns status=PASS detail=6 required columns present
+2026-09-25 13:06:26,993 | INFO | Validation | check=dispatch.required_columns status=PASS detail=3 required columns present
+2026-09-25 13:06:26,993 | INFO | Validation | check=orders.order_id_uniqueness status=WARN detail=duplicate_order_ids=3 duplicate_rows_involved=6
+2026-09-25 13:06:26,993 | INFO | Validation | check=orders.delivered_completion_timestamp status=WARN detail=delivered_rows_missing_actual_delivery_at=37
+2026-09-25 13:06:26,993 | INFO | Validation | check=orders.timestamp_chronology status=WARN detail={'promised_before_created': 4, 'pickup_before_created': 0, 'actual_before_pickup': 5}
+2026-09-25 13:06:26,993 | INFO | Validation | check=orders.freshness status=PASS detail=latest_created_at=2026-08-28 23:33:00 age_days=28
+2026-09-25 13:06:26,993 | INFO | Validation | check=order_outcomes.order_id_uniqueness status=PASS detail=duplicate_rows=0
+2026-09-25 13:06:26,994 | INFO | Validation | check=orders.customer_id_to_customers status=PASS detail=coverage=100.00% unmapped=0
+2026-09-25 13:06:26,994 | INFO | Validation | check=orders.driver_id_to_drivers status=PASS detail=coverage=100.00% unmapped=0
+2026-09-25 13:06:26,994 | INFO | Validation | check=orders.restaurant_id_to_restaurants status=PASS detail=coverage=100.00% unmapped=0
+2026-09-25 13:06:26,994 | INFO | Validation | check=order_outcomes.order_id_to_orders status=PASS detail=coverage=100.00% unmapped=0
+2026-09-25 13:06:26,994 | INFO | Validation | check=dispatch.order_id_to_orders status=PASS detail=coverage=100.00% unmapped=0
+2026-09-25 13:06:26,995 | INFO | Validation | check=support_tickets.order_linkage status=WARN detail=unlinked_tickets=3
+2026-09-25 13:06:26,996 | INFO | Validation | check=dispatch.order_set_completeness status=PASS detail=expected_orders=1600 received_orders=1600 missing=0
+2026-09-25 13:06:27,894 | INFO | Built order_journey | rows=1600 duplicate_source_flags=3
+2026-09-25 13:06:27,973 | INFO | Pipeline completed | gate=WARN rows=1600

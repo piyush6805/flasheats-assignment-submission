@@ -1,0 +1,118 @@
+[
+  {
+    "source": "C:\\Users\\piyus\\Downloads\\FDE\\flasheats-assignment-submission\\data\\raw\\files\\class7_model_brief.json",
+    "source_type": "file",
+    "bytes": 426,
+    "sha256": "a13708ba8b786a7425fe6fd5a23a9b33574fa8f5b74d7df7d7c021b4810ceb6e",
+    "rows": null
+  },
+  {
+    "source": "C:\\Users\\piyus\\Downloads\\FDE\\flasheats-assignment-submission\\data\\raw\\files\\client_metric_definitions.json",
+    "source_type": "file",
+    "bytes": 543,
+    "sha256": "892284d946e6119327fd4788ede33cdf000323244d5d7bb576cf2a2ef0e6f141",
+    "rows": null
+  },
+  {
+    "source": "C:\\Users\\piyus\\Downloads\\FDE\\flasheats-assignment-submission\\data\\raw\\files\\customer_app_actions.csv",
+    "source_type": "file",
+    "bytes": 154909,
+    "sha256": "bf6f2ca6ef00dfbf55c375eae03d305e2e96324d6060df9bdff382ccf4db688d",
+    "rows": 2365
+  },
+  {
+    "source": "C:\\Users\\piyus\\Downloads\\FDE\\flasheats-assignment-submission\\data\\raw\\files\\customer_interactions.csv",
+    "source_type": "file",
+    "bytes": 33168,
+    "sha256": "092ed75eb99a1dc18570c74c3c6cbf0661c4df313f47e85884d272c0c541d64a",
+    "rows": 497
+  },
+  {
+    "source": "C:\\Users\\piyus\\Downloads\\FDE\\flasheats-assignment-submission\\data\\raw\\files\\driver_events.json",
+    "source_type": "file",
+    "bytes": 1542225,
+    "sha256": "a6aa0c6fb653ad5b348787b78c5cb2caeb86e4a94f69efa0a4a2f9ad4b5004b0",
+    "rows": 10035
+  },
+  {
+    "source": "C:\\Users\\piyus\\Downloads\\FDE\\flasheats-assignment-submission\\data\\raw\\files\\order_events.csv",
+    "source_type": "file",
+    "bytes": 405051,
+    "sha256": "cbc65cb6f25f22e840eb2a9dd2b4b412aab1b90ef1d5d589dcd53ce891371e8a",
+    "rows": 4955
+  },
+  {
+    "source": "C:\\Users\\piyus\\Downloads\\FDE\\flasheats-assignment-submission\\data\\raw\\files\\order_interventions.csv",
+    "source_type": "file",
+    "bytes": 34765,
+    "sha256": "40894d28b2ad4576f252358e1ebfa6941a553a8793fd517255db34f38575e1eb",
+    "rows": 430
+  },
+  {
+    "source": "C:\\Users\\piyus\\Downloads\\FDE\\flasheats-assignment-submission\\data\\raw\\files\\order_outcomes.csv",
+    "source_type": "file",
+    "bytes": 70490,
+    "sha256": "881677d4fccd4c7d366bc3ceb866448919a1de0feaa7d88a32444e51695b167a",
+    "rows": 1600
+  },
+  {
+    "source": "C:\\Users\\piyus\\Downloads\\FDE\\flasheats-assignment-submission\\data\\raw\\files\\restaurant_status.csv",
+    "source_type": "file",
+    "bytes": 20652,
+    "sha256": "49a1e4e8449ad560eaaf29fb90b71ffadd8535521ca161a8dd73e819f04cdea5",
+    "rows": 502
+  },
+  {
+    "source": "C:\\Users\\piyus\\Downloads\\FDE\\flasheats-assignment-submission\\data\\raw\\files\\restaurants.csv",
+    "source_type": "file",
+    "bytes": 3092,
+    "sha256": "0d2799652c1bfc1fc317c3b8bc9b47c7aba38ed3ddb457506b11e73bc766b341",
+    "rows": 60
+  },
+  {
+    "source": "C:\\Users\\piyus\\Downloads\\FDE\\flasheats-assignment-submission\\data\\raw\\files\\support_tickets.csv",
+    "source_type": "file",
+    "bytes": 20558,
+    "sha256": "213eec7e40153152574eb723fe180e06bbae9fadd1d7daeb912b41be0179d622",
+    "rows": 202
+  },
+  {
+    "source": "C:\\Users\\piyus\\Downloads\\FDE\\flasheats-assignment-submission\\data\\raw\\sqlite\\flasheats.db",
+    "source_type": "sqlite:orders",
+    "bytes": 413696,
+    "sha256": "34bc065c453beef3d9656690c642d384767e5ea950b379376d655b298b06e02c",
+    "rows": 1603
+  },
+  {
+    "source": "C:\\Users\\piyus\\Downloads\\FDE\\flasheats-assignment-submission\\data\\raw\\sqlite\\flasheats.db",
+    "source_type": "sqlite:customers",
+    "bytes": 413696,
+    "sha256": "34bc065c453beef3d9656690c642d384767e5ea950b379376d655b298b06e02c",
+    "rows": 900
+  },
+  {
+    "source": "C:\\Users\\piyus\\Downloads\\FDE\\flasheats-assignment-submission\\data\\raw\\sqlite\\flasheats.db",
+    "source_type": "sqlite:drivers",
+    "bytes": 413696,
+    "sha256": "34bc065c453beef3d9656690c642d384767e5ea950b379376d655b298b06e02c",
+    "rows": 120
+  },
+  {
+    "source": "C:\\Users\\piyus\\Downloads\\FDE\\flasheats-assignment-submission\\data\\raw\\sqlite\\flasheats.db",
+    "source_type": "sqlite:restaurants",
+    "bytes": 413696,
+    "sha256": "34bc065c453beef3d9656690c642d384767e5ea950b379376d655b298b06e02c",
+    "rows": 60
+  },
+  {
+    "source": "C:\\Users\\piyus\\Downloads\\FDE\\flasheats-assignment-submission\\data\\raw\\api\\retrieval_runs\\run_date=2026-09-25\\dispatch_page_001.json",
+    "source_type": "api_page",
+    "bytes": 19206,
+    "sha256": "a40b89645a3c50d01df407a40da165eb052747caa23b4eb7794947a716f997cd",
+    "rows": null,
+    "api_pages": 32,
+    "api_records": 1600,
+    "api_expected_records": 1600,
+    "run_date": "2026-09-25"
+  }
+]

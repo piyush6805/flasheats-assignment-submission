@@ -1,0 +1,7 @@
+metric,numerator,denominator,value,formula,interpretation
+late_delivery_rate_pct,843.0,1495,56.39,late_flag = 1 / measurable outcome rows,Primary KPI; outcome source
+meaningfully_late_rate_pct_gt_10_min,349.0,1495,23.34,delay_min > 10 / measurable outcome rows,Secondary severity KPI
+median_delay_among_late_min,,843,8.03,median delay_min where late_flag = 1,Late-delivery severity
+median_order_to_pickup_min,,1600,26.14,median pickup_at - created_at,Preparation/handoff proxy
+customer_friction_rate_pct,292.0,1495,19.53,orders with support/app interaction signal,Customer experience
+intervention_rate_pct,404.0,1495,27.02,orders with at least one intervention,Operational response
