@@ -44,6 +44,8 @@ docs/                  Source, model, validation, and limitation documentation
 
 ## Setup
 
+Use Python 3.12 or 3.13 on Windows. The requirements pin pandas to a release with Windows wheels for those Python versions; Python 3.14 may cause pip to fall back to a source build.
+
 ```bash
 python -m pip install -r requirements.txt
 python src/run_pipeline.py --run-date 2026-09-25
